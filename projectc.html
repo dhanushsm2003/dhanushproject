@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhanush Gowda SM – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(-45deg, #1f1c2c, #928dab, #0f2027, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    a { color: #00f5d4; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Container */
+    .container { max-width: 1100px; margin: auto; padding: 20px; }
+
+    /* Header */
+    header { text-align: center; padding: 60px 20px; }
+    header img {
+      width: 150px; height: 150px;
+      border-radius: 50%; border: 4px solid #00f5d4;
+      margin-bottom: 15px; transition: transform 0.4s ease;
+    }
+    header img:hover { transform: scale(1.1) rotate(5deg); }
+    header h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; opacity: 0.9; }
+
+    /* Sections */
+    section {
+      background: rgba(0,0,0,0.4);
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      opacity: 0; transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+    section.visible { opacity: 1; transform: translateY(0); }
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #ffdd57;
+      border-left: 5px solid #00f5d4;
+      padding-left: 10px;
+    }
+    ul { margin-left: 20px; }
+    li { margin-bottom: 8px; }
+
+    /* Skills */
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skills span {
+      display: inline-flex; align-items: center;
+      background: #00f5d4; color: #000;
+      padding: 8px 14px; border-radius: 25px;
+      font-weight: 600; font-size: 0.9rem;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .skills span:hover {
+      transform: scale(1.1);
+      background: #ffdd57;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      background: rgba(0,0,0,0.5);
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <img src="C:\Users\user\Downloads\Dhanush_signature.jpg" alt="Profile Photo">
+      <h1>Dhanush Gowda SM</h1>
+      <p>🌐 Apprentice – Network Support Engineer @ F5 Networks, Bengaluru</p>
+      <p>📧 <a href="mailto:dhanushsm2003@gmail.com">dhanushsm2003@gmail.com</a> | 📱 +91 91087 50724</p>
+    </header>
+
+    <!-- Experience -->
+    <section>
+      <h2>Professional Experience</h2>
+      <ul>
+        <li><b>Apprentice – Network Support Engineer, F5 Networks</b> (Present)<br>
+        Supporting L2/L3 networking, load balancing, application delivery & security.</li>
+        <li><b>Intern – ISRO (MCF)</b><br>
+        Worked on WAN setup, Red Hat Linux, Wireshark, VMware, VPNs, firewalls, dashboards in Tableau/Power BI.</li>
+        <li><b>Python Developer Intern – Karunadu Technologies</b><br>
+        Built Python scripts and supported data analysis projects.</li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills">
+        <span>🐍 Python</span>
+        <span>📊 Pandas</span>
+        <span>📈 NumPy</span>
+        <span>💾 SQL</span>
+        <span>🔍 Wireshark</span>
+        <span>💻 VMware</span>
+        <span>🔥 Firewalls</span>
+        <span>🐧 Linux (RHEL)</span>
+        <span>🌐 TCP/IP, OSI</span>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2>Education</h2>
+      <p><b>BE – Information Science</b> (2021–2025)<br>
+      ATRIA Institute of Technology, VTU – CGPA: 9.1</p>
+    </section>
+
+    <!-- Certifications -->
+    <section>
+      <h2>Certifications</h2>
+      <ul>
+        <li>Python Programming Certification</li>
+        <li>ISRO Training – Master Control Facility (MCF)</li>
+      </ul>
+    </section>
+
+    <!-- Personal -->
+    <section>
+      <h2>Personal Details</h2>
+      <p><b>Date of Birth:</b> 27/02/2003</p>
+      <p><b>Languages:</b> English, Kannada, Hindi</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Dhanush Gowda SM | Hosted on GitHub Pages</p>
+    </footer>
+  </div>
+
+  <!-- Scroll reveal JS -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const revealOnScroll = () => {
+      const trigger = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if(top < trigger) sec.classList.add("visible");
+      });
+    };
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
+</body>
+</html>
+
